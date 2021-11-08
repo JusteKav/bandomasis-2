@@ -22,6 +22,10 @@ class ToysGridComponent {
     this.state.loading = false;
   };
 
+  deleteToy = (id) => {
+    API.deleteToys(id, this.fetchToy, this.showError);
+  };
+
   init = () => {
     this.fetchToy();
     this.render();
@@ -33,9 +37,10 @@ class ToysGridComponent {
     } else {
       this.htmlElement.innerHTML = "";
       const cardComponents = this.state.toys.map(
-        ({ id, ...cardProps }) =>
+        ({ id, ...props }) =>
           new ToyCardComponent({
-            ...cardProps,
+            ...props,
+            deleteCard: () => this.deleteToy(id),
           })
       );
       const cardElements = cardComponents.map((componenent) => componenent.htmlElement);

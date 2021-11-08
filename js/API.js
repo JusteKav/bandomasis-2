@@ -11,7 +11,7 @@ class API {
   };
 
   static deleteToys = (id, resolve, reject) => {
-    fetch(urlBase + "/toys" + "/" + id, { method: "DELETE" })
+    fetch(urlBase + "/toys/" + id, { method: "DELETE" })
       .then((data) => data.json())
       .then(resolve)
       .catch(reject);
