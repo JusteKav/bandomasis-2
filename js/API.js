@@ -2,10 +2,12 @@ const urlBase = "http://localhost:3000";
 
 class API {
   static getToys = (resolve, reject) => {
-    fetch(urlBase + "/toys")
-      .then((data) => data.json())
-      .then(resolve)
-      .catch(reject);
+    setTimeout(() => {
+      fetch(urlBase + "/toys")
+        .then((data) => data.json())
+        .then(resolve)
+        .catch(reject);
+    }, 1000);
   };
 
   static deleteToys = (id, resolve, reject) => {
@@ -16,10 +18,10 @@ class API {
   };
 }
 
-// API.getToys(
-//   (duomenys) => console.log("Gauti duomenys: ", duomenys),
-//   (klaida) => console.error("Kode yra klaida: ", klaida)
-// );
+API.getToys(
+  (duomenys) => console.log("Gauti duomenys: ", duomenys),
+  (klaida) => console.error("Kode yra klaida: ", klaida)
+);
 
 // API.deleteToys(
 //   "2",
