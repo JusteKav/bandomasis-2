@@ -18,10 +18,10 @@ class API {
   };
 }
 
-API.getToys(
-  (duomenys) => console.log("Gauti duomenys: ", duomenys),
-  (klaida) => console.error("Kode yra klaida: ", klaida)
-);
+// API.getToys(
+//   (duomenys) => console.log("Gauti duomenys: ", duomenys),
+//   (klaida) => console.error("Kode yra klaida: ", klaida)
+// );
 
 // API.deleteToys(
 //   "2",

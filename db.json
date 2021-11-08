@@ -52,7 +52,9 @@
         "currency": "$",
         "amount": 50
       },
-      "ageRestrictions": null,
+      "ageRestrictions": {
+        "from": null
+      },
       "discount": {
         "type": "amount",
         "amount": 10

@@ -31,12 +31,15 @@ class ToysGridComponent {
     if (this.state.loading) {
       this.htmlElement.innerHTML = '<img src="assets/loading.gif">';
     } else {
-      this.htmlElement.innerHTML = this.state.toys.reduce((sum, el) => {
-        sum += `
-        <div class="card">Kortelės turinys</div>
-        `;
-        return sum;
-      }, []);
+      this.htmlElement.innerHTML = "";
+      const cardComponents = this.state.toys.map(
+        ({ id, ...cardProps }) =>
+          new ToyCardComponent({
+            ...cardProps,
+          })
+      );
+      const cardElements = cardComponents.map((componenent) => componenent.htmlElement);
+      this.htmlElement.append(...cardElements);
     }
   };
 }
