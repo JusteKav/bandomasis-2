@@ -16,21 +16,6 @@
       }
     },
     {
-      "id": "2",
-      "title": "BRUIN PIANINAS LALA",
-      "price": {
-        "currency": "€",
-        "amount": 50
-      },
-      "ageRestrictions": {
-        "from": 9
-      },
-      "discount": {
-        "type": "amount",
-        "amount": 9
-      }
-    },
-    {
       "id": "3",
       "title": "BRUIN PIANINAS SU KĖDUTE",
       "price": {
